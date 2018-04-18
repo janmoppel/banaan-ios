@@ -11,9 +11,36 @@
 
 default_platform(:ios)
 
-platform :ios do
+desc "Build the app"
+lane :build_banaan do
+  xcversion(version: "9.3")
+  build_ios_app(
+    project: "banaan.xcodeproj",
+    configuration: "Debug",
+    scheme: "banaan",
+    # output_directory: "path/to/dir",   # Destination directory. Defaults to current directory.
+    output_name: "banaan-ios.ipa",       # specify the name of the .ipa file to generate (including file extension)
+    sdk: "iOS 11.3",                     # use SDK as the name or path of the base SDK when building the project.
+    export_method: "app-store",
+    export_options: {
+      provisioningProfiles: {
+        "io.nevercode.banaan" => "match AppStore io.nevercode.banaan"
+      }
+    }
+  )
+end
+
+platform :wtf do
   desc "Description of what the lane does"
   lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+    sh "echo 'tere talv'"
+  end
+end
+
+platform :ios do
+  lane :test_banaan do
+    run_tests(workspace: "banaan.xcworkspace",
+              devices: ["iPhone 6s"],  # , "iPad Air"],
+              scheme: "banaan")
   end
 end
