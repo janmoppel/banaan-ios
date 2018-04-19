@@ -30,7 +30,12 @@ lane :build_banaan do
   )
 end
 
-platform :wtf do
+lane :build_and_setup_signing do
+  match(type: "app-store")
+  gym
+end
+
+platform :android do
   desc "Description of what the lane does"
   lane :custom_lane do
     sh "echo 'tere talv'"
