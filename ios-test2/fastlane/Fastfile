@@ -31,7 +31,7 @@ lane :build_banaan do
 end
 
 lane :build_and_setup_signing do
-  match(type: "app-store")
+  match(type: "appstore")
   gym
 end
 
