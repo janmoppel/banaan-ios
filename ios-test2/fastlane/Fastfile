@@ -16,7 +16,7 @@ lane :build_banaan do
   xcversion(version: "9.2")
   build_ios_app(
     project: "banaan.xcodeproj",
-    configuration: "Debug",
+    configuration: "Release",
     scheme: "banaan",
     # output_directory: "path/to/dir",   # Destination directory. Defaults to current directory.
     output_name: "banaan-ios.ipa",       # specify the name of the .ipa file to generate (including file extension)
