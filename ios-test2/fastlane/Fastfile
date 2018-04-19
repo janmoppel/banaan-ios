@@ -20,7 +20,7 @@ lane :build_banaan do
     scheme: "banaan",
     # output_directory: "path/to/dir",   # Destination directory. Defaults to current directory.
     output_name: "banaan-ios.ipa",       # specify the name of the .ipa file to generate (including file extension)
-    sdk: "iOS 11.3",                     # use SDK as the name or path of the base SDK when building the project.
+    sdk: "iOS 11.2",                     # use SDK as the name or path of the base SDK when building the project.
     export_method: "app-store",
     export_options: {
       provisioningProfiles: {
