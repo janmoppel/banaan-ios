@@ -32,7 +32,7 @@ end
 
 lane :build_and_setup_signing do
   sh "ssh-add $IOS_CREDENTIALS_KEY"
-  match(type: "appstore",r readonly: true)
+  match(type: "appstore", readonly: true)
   gym
 end
 
