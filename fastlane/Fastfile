@@ -21,19 +21,19 @@ lane :build_banaan do
     # output_directory: "path/to/dir",   # Destination directory. Defaults to current directory.
     output_name: "banaan-ios.ipa",       # specify the name of the .ipa file to generate (including file extension)
     sdk: "iOS 11.2",                     # use SDK as the name or path of the base SDK when building the project.
-    # export_method: "app-store",
-    # export_options: {
-    #   provisioningProfiles: {
-    #     "io.nevercode.banaan" => "match AppStore io.nevercode.banaan"
-    #   }
-    # }
   )
 end
 
 lane :build_and_setup_signing do
   match(app_identifier: "io.nevercode.banaan", type: "appstore", readonly: true)
-  disable_automatic_code_signing
-  gym
+  gym(
+    export_method: "app-store",
+    export_options: {
+      provisioningProfiles: {
+        "io.nevercode.banaan" => "match AppStore io.nevercode.banaan"
+      }
+    }
+  )
 end
 
 platform :android do
