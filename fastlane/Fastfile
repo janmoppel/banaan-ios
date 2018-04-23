@@ -27,7 +27,6 @@ end
 lane :build_and_setup_signing do
   match(app_identifier: "io.nevercode.banaan", type: "appstore", readonly: true)
   gym(
-    xcargs: "-allowProvisioningUpdates",
     export_method: "app-store",
     export_options: {
       provisioningProfiles: {
