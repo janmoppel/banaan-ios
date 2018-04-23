@@ -442,8 +442,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nevercode.banaan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f312e0d-1540-4437-8a1e-12688c181091";
-				PROVISIONING_PROFILE_SPECIFIER = ios_distribution_io_nevercode;
+				PROVISIONING_PROFILE = "f1ff45ff-a691-4770-bfa8-d818e9b3eb46";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc io.nevercode.banaan";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -459,8 +459,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nevercode.banaan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f312e0d-1540-4437-8a1e-12688c181091";
-				PROVISIONING_PROFILE_SPECIFIER = ios_distribution_io_nevercode;
+				PROVISIONING_PROFILE = "497b66bb-ed03-4fc0-88d6-e50c42bb2f1b";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore io.nevercode.banaan";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
