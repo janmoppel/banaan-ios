@@ -198,18 +198,18 @@
 					3870294A1DE479500008D573 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = MPRGV3Y7Q4;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					3870295E1DE479500008D573 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = T44NESVEFN;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 3870294A1DE479500008D573;
 					};
 					387029691DE479500008D573 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = T44NESVEFN;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 3870294A1DE479500008D573;
 					};
 				};
@@ -436,14 +436,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MPRGV3Y7Q4;
 				INFOPLIST_FILE = "ios-test2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nevercode.banaan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "15d0e496-0135-4272-bc2e-7f47d20e156f";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development io.nevercode.banaan";
+				PROVISIONING_PROFILE = "$(sigh_io.nevercode.banaan_appstore)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(sigh_io.nevercode.banaan_development)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -452,15 +452,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MPRGV3Y7Q4;
 				INFOPLIST_FILE = "ios-test2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nevercode.banaan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "497b66bb-ed03-4fc0-88d6-e50c42bb2f1b";
-				PROVISIONING_PROFILE_SPECIFIER = "$(sigh_io.nevercode.banaan_appstore)";
+				PROVISIONING_PROFILE = "$(sigh_io.nevercode.banaan_appstore)";
+				PROVISIONING_PROFILE_SPECIFIER = "$(sigh_io.nevercode.banaan_development)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -470,6 +470,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = T44NESVEFN;
 				INFOPLIST_FILE = "ios-test2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -485,6 +486,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = T44NESVEFN;
 				INFOPLIST_FILE = "ios-test2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -499,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = T44NESVEFN;
 				INFOPLIST_FILE = "ios-test2UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -514,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = T44NESVEFN;
 				INFOPLIST_FILE = "ios-test2UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
