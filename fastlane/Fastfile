@@ -45,7 +45,7 @@ end
 
 platform :ios do
   lane :test_banaan do
-    run_tests(workspace: "banaan.xcworkspace",
+    run_tests(project: "banaan.xcodeproj",
               devices: ["iPhone 6s"],  # , "iPad Air"],
               scheme: "banaan")
   end
