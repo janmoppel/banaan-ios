@@ -28,16 +28,12 @@ fastlane build_and_setup_signing
 
 ----
 
-## Android
-### android custom_lane
-```
-fastlane android custom_lane
-```
-Description of what the lane does
-
-----
-
 ## iOS
+### ios simulator_build
+```
+fastlane ios simulator_build
+```
+Build without signing
 ### ios test_banaan
 ```
 fastlane ios test_banaan

@@ -438,6 +438,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MPRGV3Y7Q4;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
 				INFOPLIST_FILE = "ios-test2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nevercode.banaan;
@@ -455,6 +457,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MPRGV3Y7Q4;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
 				INFOPLIST_FILE = "ios-test2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nevercode.banaan;

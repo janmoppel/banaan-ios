@@ -36,17 +36,20 @@ lane :build_and_setup_signing do
   )
 end
 
-platform :android do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    sh "echo 'tere talv'"
-  end
-end
-
 platform :ios do
+  desc "Build without signing"
+  lane :simulator_build do
+    xcbuild(
+      project: "banaan.xcodeproj",
+      configuration: "Release",
+      scheme: "banaan",
+      xcargs: "-sdk iphonesimulator",
+    )
+  end
+
   lane :test_banaan do
     run_tests(project: "banaan.xcodeproj",
-              devices: ["iPhone 6s"],  # , "iPad Air"],
+              devices: ["iPhone 6s", "iPad Air"],
               scheme: "banaan")
   end
 end
