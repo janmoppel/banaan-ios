@@ -11,33 +11,41 @@
 
 default_platform(:ios)
 
-desc "Build the app"
-lane :build_banaan do
-  xcversion(version: "9.2")
-  gym(
-    project: "banaan.xcodeproj",
-    configuration: "Release",
-    scheme: "banaan",
-    # output_directory: "path/to/dir",   # Destination directory. Defaults to current directory.
-    output_name: "banaan-ios.ipa",       # specify the name of the .ipa file to generate (including file extension)
-    sdk: "iOS 11.2",                     # use SDK as the name or path of the base SDK when building the project.
-  )
-end
-
-lane :build_and_setup_signing do
-  match(app_identifier: "io.nevercode.banaan", type: "appstore", readonly: true)
-  gym(
-    export_method: "app-store",
-    export_options: {
-      provisioningProfiles: {
-        "io.nevercode.banaan" => "match AppStore io.nevercode.banaan"
-      }
-    }
-  )
-end
-
 platform :ios do
-  desc "Build without signing"
+
+  desc "Build the app without using existing code signing settings"
+  lane :build_banaan do
+    xcversion(version: "9.2")
+    gym(
+      project: "banaan.xcodeproj",
+      configuration: "Release",
+      scheme: "banaan",
+      # output_directory: "path/to/dir",   # Destination directory. Defaults to current directory.
+      output_name: "banaan-ios.ipa",       # specify the name of the .ipa file to generate (including file extension)
+      sdk: "iOS 11.2",                     # use SDK as the name or path of the base SDK when building the project.
+    )
+  end
+
+  desc "Download signing filed, build the app and run the tests"
+  lane :build_and_test do
+    build_signed
+    execute_tests
+  end
+
+  desc "Download signign files and build the app"
+  lane :build_signed do
+    match(app_identifier: "io.nevercode.banaan", type: "appstore", readonly: true)
+    gym(
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: {
+          "io.nevercode.banaan" => "match AppStore io.nevercode.banaan"
+        }
+      }
+    )
+  end
+
+  desc "Build without signing for simulator"
   lane :simulator_build do
     xcbuild(
       project: "banaan.xcodeproj",
@@ -47,9 +55,12 @@ platform :ios do
     )
   end
 
-  lane :test_banaan do
-    run_tests(project: "banaan.xcodeproj",
-              devices: ["iPhone 6s", "iPad Air"],
-              scheme: "banaan")
+  desc "Run application's test suite"
+  lane :execute_tests do
+    run_tests(
+      project: "banaan.xcodeproj",
+      devices: ["iPhone 6s", "iPad Air"],
+      scheme: "banaan"
+    )
   end
 end
