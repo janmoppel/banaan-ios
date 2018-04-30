@@ -62,5 +62,6 @@ platform :ios do
       devices: ["iPhone 6s", "iPad Air"],
       scheme: "banaan"
     )
+    trainer(output_directory: ENV["NC_XUNIT_RESULTS_DIR"])
   end
 end
