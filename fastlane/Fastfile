@@ -60,7 +60,8 @@ platform :ios do
     run_tests(
       project: "banaan.xcodeproj",
       devices: ["iPhone 6s", "iPad Air"],
-      scheme: "banaan"
+      scheme: "banaan",
+      fail_build: false,
     )
     trainer(output_directory: ENV["NC_XUNIT_RESULTS_DIR"])
   end
