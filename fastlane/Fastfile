@@ -59,7 +59,7 @@ platform :ios do
   lane :execute_tests do
     run_tests(
       project: "banaan.xcodeproj",
-      devices: ["iPhone 6s", "iPad Air"],
+      # devices: ["iPhone 6s", "iPad Air"],
       scheme: "banaan",
       fail_build: false,
     )
