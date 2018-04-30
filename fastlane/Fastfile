@@ -28,7 +28,7 @@ platform :ios do
 
   desc "Download signing filed, build the app and run the tests"
   lane :build_and_test do
-    build_signed
+    # build_signed
     execute_tests
   end
 
