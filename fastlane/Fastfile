@@ -13,7 +13,7 @@ default_platform(:ios)
 
 platform :ios do
 
-  desc "Build the app without using existing code signing settings"
+  desc "Build the app using predefined code signing settings"
   lane :build_banaan do
     xcversion(version: "9.2")
     gym(
@@ -26,9 +26,9 @@ platform :ios do
     )
   end
 
-  desc "Download signing filed, build the app and run the tests"
+  desc "Download signing files, build the app and run the tests"
   lane :build_and_test do
-    # build_signed
+    build_signed
     execute_tests
   end
 
@@ -45,7 +45,7 @@ platform :ios do
     )
   end
 
-  desc "Build without signing for simulator"
+  desc "Build the app for simulator"
   lane :simulator_build do
     xcbuild(
       project: "banaan.xcodeproj",
