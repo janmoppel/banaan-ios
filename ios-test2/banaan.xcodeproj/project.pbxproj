@@ -497,7 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.greenhouseci.ios-test2UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = banaan;
 			};
 			name = Debug;
@@ -512,7 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.greenhouseci.ios-test2UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = banaan;
 			};
 			name = Release;
